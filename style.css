@@ -1,0 +1,219 @@
+:root {
+    --black: #2b2a2c;
+    --gray: #6a696b;
+    --gray-light: #dedede;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+p {
+    margin: 0 0 1rem;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.header_inner {
+    background-color: var(--gray);
+    display: flex;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    color: var(--white);
+    gap: 40px;
+}
+
+
+
+.nav_link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    border-bottom: 2px solid white;
+    padding: 0 0 4px;
+}
+
+.main_inner {
+    background-color: rgb(230, 240, 240);
+    height: 1200px;
+}
+
+.main_inner h1 {
+    text-align: center;
+}
+
+.main_inner p {
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.two_pictures {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pic {
+    width: 500px;
+    height: 450px;
+    box-shadow: 0 0 10px;
+}
+
+.text_for_pic {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: var(--gray);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.button:active {
+    transform: translateY(4px);
+}
+
+/* Общие стили остаются без изменений */
+
+/* Адаптив для телефонов и маленьких экранов */
+@media (max-width: 768px) {
+
+    /* Логотип */
+    .logo {
+        width: 120px;
+        height: 120px;
+        padding: 5px;
+    }
+
+    /* Хедер */
+    .header_inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Навигация */
+    nav {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .nav_link {
+        font-size: 1.2rem;
+    }
+
+    /* Основной контент */
+    .main_inner {
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Изображения */
+    .pic {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Кнопка */
+    .button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* Адаптив для очень маленьких экранов (например, телефоны в портретном режиме) */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main_inner h1 {
+        font-size: 1.8rem;
+    }
+
+    .main_inner p {
+        font-size: 1rem;
+    }
+
+    .two_pictures {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        font-size: 1.1rem;
+    }
+}
